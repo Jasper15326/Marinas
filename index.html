@@ -1,17 +1,210 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasper Ray I. Marinas | Portfolio</title>
     <meta name="description" content="Personal portfolio of Jasper Ray I. Marinas, Information Technology student with expertise in web development, UI/UX design, and computer hardware.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <a href="#home" class="logo">Jasper<span>Marinas</span></a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </nav>
+            <button id="mobileMenuBtn" class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <p class="subtitle">Hello, I'm</p>
+                <h1 class="title">Jasper Ray I. Marinas</h1>
+                <h2 class="role">Information Technology Student & <span>Tech Enthusiast</span></h2>
+                <p class="description">
+                    Passionate about technology, creativity, and problem-solving. 
+                    I specialize in web development, UI/UX design, and computer hardware.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary">Contact Me</a>
+                    <a href="#projects" class="btn secondary">View My Work</a>
+                </div>
+                <img src="/459845041_1319666856084123_2788019928182474667_n.jpg" alt="Profile" class="profile-image">
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="content">
+                    <p>I'm an Information Technology student with a passion for technology, creativity, and problem-solving. My journey in tech has been driven by curiosity and a desire to create meaningful digital experiences.</p>
+                    <div class="interests">
+                        <div class="interest-card">
+                            <i class="icon gaming"></i>
+                            <h3>Gaming</h3>
+                            <p>More than entertainment, gaming inspires my creativity and curiosity in game development and user experience design.</p>
+                        </div>
+                        <div class="interest-card">
+                            <i class="icon design"></i>
+                            <h3>Design</h3>
+                            <p>I use tools like Figma to create modern and user-friendly interfaces that balance aesthetics and functionality.</p>
+                        </div>
+                        <div class="interest-card">
+                            <i class="icon hardware"></i>
+                            <h3>Computer Hardware</h3>
+                            <p>I enjoy fixing and upgrading computer systems, understanding how hardware components work together.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="design">UI/UX Design</button>
+                    <button class="filter-btn" data-filter="software">Software</button>
+                </div>
+                <div class="project-grid">
+                    <div class="project-card" data-category="web">
+                        <img src="tictactoe.jpg" alt="Tic Tac Toe">
+                        <div class="project-info">
+                            <h3>Tic Tac Toe Game</h3>
+                            <p>A classic game implemented with modern web technologies.</p>
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="software">
+                        <img src="library.jpg" alt="Library System">
+                        <div class="project-info">
+                            <h3>Library Management System</h3>
+                            <p>A Java-based system for managing library resources.</p>
+                            <div class="tags">
+                                <span>Java</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web">
+                        <img src="emoney.jpg" alt="E-Money App">
+                        <div class="project-info">
+                            <h3>E-Money Application</h3>
+                            <p>Digital payment solution with secure transactions.</p>
+                            <div class="tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="design">
+                        <img src="batangkalye.jpg" alt="Batang Kalye">
+                        <div class="project-info">
+                            <h3>Batang Kalye</h3>
+                            <p>Mobile game UI/UX design concept.</p>
+                            <div class="tags">
+                                <span>Figma</span>
+                                <span>UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <i class="icon phone"></i>
+                            <div>
+                                <span>Phone</span>
+                                <a href="tel:+639186012824">0918 601 2824</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="icon email"></i>
+                            <div>
+                                <span>Email</span>
+                                <a href="mailto:jaspermarinas18@gmail.com">jaspermarinas18@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#home" class="logo">Jasper<span>Marinas</span></a>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="icon github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="icon linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="icon twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jasper Ray I. Marinas. All rights reserved.</p>
+                <p>Made with ❤️ using HTML, CSS, and JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
